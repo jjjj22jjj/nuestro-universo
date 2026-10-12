@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --night: #060a1e;
+  --gold: #ffe49a;
+}
+
+body {
+  background-color: #060a1e;
+  color: #fef3c7;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-hand {
+  font-family: var(--font-hand), cursive;
+}
