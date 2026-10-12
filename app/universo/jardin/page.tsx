@@ -1,32 +1,52 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { flores } from "@/content/flores";
 
+type Estrella = {
+  top: number;
+  left: number;
+  opacity: number;
+  duration: number;
+  delay: number;
+};
+
 export default function Jardin() {
   const [abierta, setAbierta] = useState<string | null>(null);
+  const [estrellas, setEstrellas] = useState<Estrella[]>([]);
   const flor = flores.find((f) => f.id === abierta);
+
+  useEffect(() => {
+    const generadas: Estrella[] = Array.from({ length: 40 }).map(() => ({
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      opacity: Math.random() * 0.5 + 0.2,
+      duration: 2 + Math.random() * 3,
+      delay: Math.random() * 2,
+    }));
+    setEstrellas(generadas);
+  }, []);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#060a1e] px-5 py-10">
       {/* Estrellitas de fondo */}
       <div className="pointer-events-none absolute inset-0">
-        {Array.from({ length: 40 }).map((_, i) => (
+        {estrellas.map((e, i) => (
           <motion.span
             key={i}
             className="absolute h-1 w-1 rounded-full bg-amber-200"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.5 + 0.2,
+              top: `${e.top}%`,
+              left: `${e.left}%`,
+              opacity: e.opacity,
             }}
             animate={{ opacity: [0.2, 0.7, 0.2] }}
             transition={{
-              duration: 2 + Math.random() * 3,
+              duration: e.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: e.delay,
             }}
           />
         ))}
@@ -63,10 +83,10 @@ export default function Jardin() {
                   rotate: [-4, 4, -4],
                 }}
                 transition={{
-                  duration: 4 + Math.random() * 2,
+                  duration: 4 + (i % 3),
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: Math.random() * 2,
+                  delay: (i % 5) * 0.4,
                 }}
                 className="text-5xl drop-shadow-[0_0_15px_rgba(255,228,154,0.5)] transition group-hover:scale-125 md:text-6xl"
               >
