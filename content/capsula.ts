@@ -4,13 +4,8 @@ export type MensajeCapsula = {
 };
 
 export const capsulaConfig = {
-  // Se abre el 13 de cada mes
   diaMensual: 13,
-
-  // Y también el 22 de diciembre (su cumpleaños)
   cumpleaños: { mes: 12, dia: 22 },
-
-  // Mensaje que aparece si hoy toca abrir pero todavía no escribiste el mensaje
   mensajePendiente: {
     titulo: "Todavía no escribí este mensaje",
     texto:
@@ -18,24 +13,16 @@ export const capsulaConfig = {
   },
 };
 
-// =====================================================
-// MENSAJES POR FECHA (formato: "AÑO-MES-DÍA")
-// Cada 13 de cada mes. Y también cada 22 de diciembre.
-// =====================================================
-
 export const mensajesCapsula: Record<string, MensajeCapsula> = {
-  // ============ 2026 ============
-    "2026-10-13": {
-    titulo: "Mi morocha",
+  "2026-10-13": {
+    titulo: "Un mes más",
     texto:
-      "Hoolaaa amor, felices 6 meses juntos. Quiero decirte que te amo mucho y que sos el amor de mi vida. Gracias por estar conmigo siempre, en todo momento, en los malos días, en los días felices, en los días tristes y en los días en los que solo necesitaba un abrazo.\n\nMe gusta ver cómo cada día, cada semana, y cada mes vamos haciéndonos más maduros, más responsables, y vamos creando una relación más fuerte.\n\nPeleamos, nos reconciliamos, nos apoyamos y nunca nos dejamos.\n\nSi pudiera estar con vos ahora mismo, solo te diría algo: \"Nunca te vayas\".\n\nSi tenemos un problema lo podemos hablar y arreglar. No te preocupes por nada, ¿sí? Siempre podremos hacerlo juntos y siempre nos tendremos el uno al otro. Nunca más vas a estar sola.\n\nTe amo mucho, mi nico besha. Felices 6 meses. VAMOS POR MASSS.",
+      "Mi negrita:\n\nOtro 13, otro mes más juntos. No sé qué te escribí el mes pasado, pero sé lo que siento hoy: que te elegiría mil veces más.\n\nGracias por seguir acá.\n\nTuyo, siempre.",
   },
   "2026-11-13": {
-      "2026-11-13": {
     titulo: "Felices 7 meses, mi chocolate ❤️",
     texto:
       "Holaaa mi chocolate nestleeeee, FELICES 7 MESES AMORR.\n\nQuiero decirte que te amo muchísimo y que hoy es un día muy especial. Un día como hoy, hace 7 meses, te pedía ser mi novia. Desde ese día todo cambió. Desde ese día me gané una compañera que amo con todo mi corazón, me gané una compañera que me cuida, me escucha y me ama.\n\nQuiero que sepas lo profundamente agradecido que estoy con vos por todo lo que sos y todo lo que somos. Sos una increíble mujer, y aunque peleemos, nos retemos y a veces tengamos nuestros días difíciles, siempre supimos amarnos con todo nuestro corazón. Estoy muy feliz de lo mucho que vamos progresando.\n\nYa son 7 meses, amor. Lo estamos logrando juntos, siempre juntos. Hoy mi deseo más grande es quedarme a tu lado, como ya te lo dije miles de veces. Seguir viendo tu mensaje cada mañana y saber que vos estás ahí esperándome con un abrazo cuando me siento mal.\n\nLa verdad, amor, es increíble el sentimiento que siento por vos y TE AMOOOOOOO con todo mi corazón, mi negrita preciosa. Hoy cumplimos 7 meses y sé que vendrán muchos meses masss juntos, después vendrán años, y hasta cuando seamos viejitos recordaré con todo mi amor todo lo que viví con vos, Nico ❤️.\n\nTe amo mi vida, te amo con todo mi corazón. Felices 7 mesesss.",
-  },
   },
   "2026-12-13": {
     titulo: "Diciembre",
@@ -47,8 +34,6 @@ export const mensajesCapsula: Record<string, MensajeCapsula> = {
     texto:
       "Negrita:\n\nHoy cumplís años. Hoy el mundo celebra el día que naciste, y yo celebro el día que empezó a existir la persona que amo.\n\nGracias por nacer. Gracias por crecer. Gracias por elegirme.\n\nOjalá este año que arranca sea el mejor de tu vida. Y ojalá yo pueda estar en él, al lado tuyo, todos los días.\n\nTe amo. Feliz cumpleaños.",
   },
-
-  // ============ 2027 ============
   "2027-01-13": {
     titulo: "Enero",
     texto:
@@ -114,8 +99,6 @@ export const mensajesCapsula: Record<string, MensajeCapsula> = {
     texto:
       "Mi vida:\n\nOtro cumpleaños tuyo. Otra vez me toca celebrarte y no me alcanzan las palabras.\n\nOjalá la vida te dé todo lo que le pedís. Y ojalá yo pueda estar al lado tuyo para verlo.\n\nFeliz cumpleaños, negrita. Te amo.",
   },
-
-  // ============ 2028 ============
   "2028-01-13": {
     titulo: "Enero",
     texto:
